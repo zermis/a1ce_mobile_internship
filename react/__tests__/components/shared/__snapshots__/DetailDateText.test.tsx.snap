@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render detail date text correctly 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "position": "relative",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#A53638",
+        "fontFamily": "ibm-semibold",
+        "fontSize": 14,
+      }
+    }
+  >
+    header
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#848484",
+        "fontFamily": "ibm-regular",
+        "fontSize": 14,
+        "textAlign": "justify",
+      }
+    }
+  >
+    body
+  </Text>
+</View>
+`;

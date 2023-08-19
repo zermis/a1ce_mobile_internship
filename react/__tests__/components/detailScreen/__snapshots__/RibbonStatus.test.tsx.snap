@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ribbon correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 15,
+        "height": 24,
+        "justifyContent": "center",
+        "width": "25%",
+      },
+      Object {
+        "backgroundColor": "green",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#FFF",
+        "fontSize": 11,
+      }
+    }
+  >
+    0
+  </Text>
+</View>
+`;

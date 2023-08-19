@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render filter bar correctly 1`] = `
+<View
+  accessibilityLabel={null}
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "width": "100%",
+      },
+    ]
+  }
+  testID={null}
+>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 50,
+          "height": 30,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderColor": "#B52B37",
+            "borderRadius": 50,
+            "borderWidth": 1,
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

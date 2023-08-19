@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render detail link text correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#4884DE",
+        "fontSize": 16,
+      }
+    }
+  >
+    •
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#4884DE",
+        "flex": 1,
+        "fontFamily": "ibm-regular",
+        "fontSize": 14,
+        "paddingLeft": 5,
+        "textDecorationLine": "underline",
+      }
+    }
+  >
+    Link is here
+  </Text>
+</View>
+`;

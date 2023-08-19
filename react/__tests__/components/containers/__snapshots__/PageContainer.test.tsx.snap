@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders page container correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderBottomLeftRadius": 30,
+        "borderBottomRightRadius": 30,
+        "height": "35%",
+        "overflow": "hidden",
+      }
+    }
+  >
+    <ViewManagerAdapter_ExpoLinearGradient
+      proxiedProperties={
+        Object {
+          "colors": Array [
+            4289279286,
+            4281878109,
+          ],
+          "endPoint": Array [
+            1,
+            0.5,
+          ],
+          "locations": undefined,
+          "startPoint": Array [
+            0,
+            0.5,
+          ],
+        }
+      }
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+            "marginLeft": 80.03999999999999,
+            "marginRight": 80.03999999999999,
+            "marginTop": 106.72,
+            "overflow": "hidden",
+          }
+        }
+      />
+    </ViewManagerAdapter_ExpoLinearGradient>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFF8F8",
+        "borderTopLeftRadius": 30,
+        "borderTopRightRadius": 30,
+        "flex": 1,
+        "marginTop": -70,
+        "overflow": "hidden",
+        "paddingHorizontal": 37.5,
+        "paddingTop": 75,
+        "zIndex": -1,
+      }
+    }
+  />
+</View>
+`;

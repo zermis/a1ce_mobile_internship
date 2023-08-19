@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render default main header correctly 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#fff",
+      "fontSize": 60.03,
+      "fontWeight": "600",
+      "letterSpacing": -0.5,
+    }
+  }
+>
+  Test
+</Text>
+`;

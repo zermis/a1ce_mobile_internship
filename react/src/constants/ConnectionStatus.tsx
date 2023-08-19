@@ -1,0 +1,6 @@
+const CONNECTION_STATUS = {
+    ONLINE: 'ONLINE',
+    OFFLINE: 'OFFLINE'
+};
+
+export default CONNECTION_STATUS;

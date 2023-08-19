@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render flex between column section correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginVertical": 9,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#353334",
+        "fontFamily": "ibm-semibold",
+        "fontSize": 16,
+        "marginBottom": 9,
+      }
+    }
+  >
+    Header
+  </Text>
+  <Text>
+    Body
+  </Text>
+</View>
+`;

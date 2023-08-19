@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render body with items 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFF8F8",
+      "borderTopLeftRadius": 30,
+      "borderTopRightRadius": 30,
+      "flex": 1,
+      "marginTop": -70,
+    }
+  }
+>
+  <View>
+    <Text>
+      Hello World
+    </Text>
+  </View>
+</View>
+`;

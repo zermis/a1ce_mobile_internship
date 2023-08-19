@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render detail body text correctly 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#848484",
+      "fontFamily": "ibm-regular",
+      "fontSize": 14,
+      "lineHeight": 20,
+      "textAlign": "justify",
+    }
+  }
+>
+  This is a test
+</Text>
+`;

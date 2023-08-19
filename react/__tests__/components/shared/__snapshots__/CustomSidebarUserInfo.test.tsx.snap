@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders custom sidebar user info correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "marginVertical": 38,
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Object {
+        "backgroundColor": "#222",
+        "borderRadius": 40,
+        "height": 80,
+        "width": 80,
+      }
+    }
+  />
+</View>
+`;

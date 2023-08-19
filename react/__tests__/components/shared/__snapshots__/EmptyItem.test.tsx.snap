@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render empty item 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "overflow": "hidden",
+      "paddingTop": 20,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontFamily": "ibm-regular",
+        "fontSize": 18,
+      }
+    }
+  >
+    No items
+  </Text>
+  <Image
+    source={1}
+    style={
+      Object {
+        "alignSelf": "center",
+        "height": 220,
+        "width": 250,
+      }
+    }
+  />
+</View>
+`;

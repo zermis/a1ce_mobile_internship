@@ -1,0 +1,68 @@
+# Reference: https://github.com/Peakfijn/template-expo/blob/develop/templates/project/bitbucket-pipelines.yml
+name: Production Workflow - Build App
+on:
+    pull_request:
+        types: [closed]
+        branches:
+            - staging
+jobs:
+    build-expo-app:
+        name: Build Expo App
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check for EXPO_TOKEN
+              run: |
+                  if [ -z "${{ secrets.EXPO_TOKEN }}" ]; then
+                    echo "You must provide an EXPO_TOKEN secret linked to this project's Expo account in this repo's secrets. Learn more: https://docs.expo.dev/eas-update/github-actions"
+                    exit 1
+                  fi
+
+            - name: Checkout Repo
+              uses: actions/checkout@v2
+
+            - name: Setup Node
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12
+
+            - name: Setup Expo
+              uses: expo/expo-github-action@v7
+              with:
+                  expo-version: latest
+                  eas-version: latest
+                  token: ${{ secrets.EXPO_TOKEN }}
+
+            - name: Create ENV File
+              run: |
+                  touch .env
+                  echo API_URL=${{ secrets.API_URL_PROD }} >> .env
+                  echo IOS_CLIENT_ID=${{ secrets.IOS_CLIENT_ID }} >> .env
+                  echo ANDROID_CLIENT_ID=${{ secrets.ANDROID_CLIENT_ID }} >> .env
+
+            - name: Find yarn Cache
+              id: yarn-cache-path
+              run: echo "::set-output name=dir::$(yarn cache dir)"
+
+            - name: Restore Cache
+              uses: actions/cache@v2
+              with:
+                  path: ${{ steps.yarn-cache-path.outputs.dir }}
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: ${{ runner.os }}-yarn-
+
+            - name: Install Dependencies
+              run: yarn install --immutable
+
+            # There are two options for Android built file, APK or app-bundle
+            # Difference: https://stackoverflow.com/questions/52059339/difference-between-apk-apk-and-app-bundle-aab
+            # If you want to change its built type, please change it in --type section then followed by "apk" or "app-bundle"
+            - name: Android - Build Expo App
+              run: npm run build:android-on-pipeline
+
+            # There are two options for iOS built file, simulator or archive
+            # If you want to test your iOS build on a Simulator, you can't use the archive. Instead, you have to build it specifically for Simulators.
+            # If you want to publish your iOS build to the store, you have to build the archive.
+            # If you want to change its built type, please change it in --type section then followed by "simulator" or "archive"
+            # Btw, we need to have apple developer account for this built type (archive)
+            # - name: IOS - Build Expo App
+            #   run: expo build:ios --type archive --non-interactive --no-wait
